@@ -12,8 +12,6 @@
 |
 */
 
-Route::get('/',function(){
-    return 'laravel';
-});
+Route::get('/','PagesController@root')->name('root');
 
 

@@ -1,18 +1,33 @@
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
 
-<div class="sui-navbar">
-    <div class="navbar-inner"><a href="/" class="sui-brand">Marry Christmas</a>
-        <ul class="sui-nav">
-            @if(!auth()->user())
-                <li class="active"><a href="/">首页</a></li>
-                <li><a href="{{url('showRegister')}}">注册</a></li>
-                @else
-                <li class="sui-dropdown"><a href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle">用户<i class="caret"></i></a>
-                    <ul role="menu" class="sui-dropdown-menu">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{{url('user_info')}}">用户信息</a></li>
-                    </ul>
-                </li>
-                <li><a href="{{url('logout')}}">退出</a></li>
-            @endif
-        </ul>
+            <!-- Collapsed Hamburger -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Branding Image -->
+            <a class="navbar-brand" href="{{ url('/') }}">
+                LaraBBS
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+            <!-- Left Side Of Navbar -->
+            <ul class="nav navbar-nav">
+
+            </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Authentication Links -->
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+            </ul>
+        </div>
     </div>
-</div>
+</nav>
